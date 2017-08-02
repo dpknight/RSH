@@ -1,0 +1,117 @@
+/*----------- Variables -------------*/
+$blue:#00338d; 
+$blue2:#055399; 
+$dark_blue:#0c1421;
+
+$highlight: $blue;     
+$highlight_2: desaturate(lighten($highlight, 10%), 50);
+$font_color_1: $dark_blue;
+
+$light_grey: #f8f7f5;
+$light_brown: #a2968a;
+
+// ::selection { background: $highlight; }
+
+/*----------- Mixins -------------*/
+
+/* but dont use placeholder as a label replacement */
+@mixin placeholder() {
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    	@content
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    	@content
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    	@content
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    	@content
+    }
+    :placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+    	@content
+    }
+}
+
+@mixin clearfix {
+   &:after { content: ""; display: table; clear: both; }
+}
+
+@mixin cf {
+   &:after { content: ""; display: table; clear: both; }
+}
+
+@mixin bp($pxvalue){
+    $emvalue: $pxvalue / 16;
+    @media (max-width: $emvalue + em){
+   // @media (max-width: $pxvalue + px){
+        @content
+    }
+}
+
+@mixin navItemActive($item){
+    .site_header > nav > ul > li:nth-child(#{$item}) {
+      &:after {content:''; width:calc(100% - 45px); height:5px; margin: 0 auto; background:$highlight;display: block; position:absolute;top:0;left:0; right:0;}
+    }
+}
+
+@mixin vertical-align($alignment: middle) {
+   &:before { vertical-align: $alignment; content: ""; display: inline-block; width: 0; height: 100%; }
+   /* Child element to be inline-block & vertical-aligned as above */
+}
+
+@mixin aspect-ratio($percentage: 56.25%) { position: relative;
+   &:before { position: relative; content: ''; display: block; padding-top: $percentage; width: 100%; }
+   /* Position child absolutely */
+}
+
+@mixin afterBlock($height: 2rem) {
+   &:after { position: relative; content: ''; display: block; height:$height; width: 100%; }
+   /* Position child absolutely */
+}
+
+@mixin hidden-text{
+    line-height: 0; margin: 0; text-indent: 100%; white-space: nowrap; overflow: hidden; color: transparent; text-decoration: none; 
+}
+
+@mixin animateProp($args...) {
+    transition-property: $args;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;    
+}
+
+@mixin ui-list{
+    list-style:none; margin:0; padding:0;
+    li{display:inline-block;  }
+}
+
+@mixin visually-hidden {
+ margin: -1px;
+ padding: 0;
+ width: 1px;
+ height: 1px;
+ overflow: hidden;
+ clip: rect(0 0 0 0);
+ clip: rect(0,0,0,0);
+ position: absolute;
+}
+
+@mixin unstyled-link {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+  &:active, &:focus {
+    outline: none;
+  }
+}
+
+@mixin word-wrap() {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}

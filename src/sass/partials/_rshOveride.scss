@@ -1,0 +1,234 @@
+//// FONTS //////////////////////////////////////////////////////////////////////////////////////////////////////
+$heading: 'Fira Sans', helvetica, arial, sans-serif;
+$paragraph: 'Lora', serif;
+
+//// GLOBAL /////////////////////////////////////////////////////////////////////////////////////////////////////
+html, body {
+  font-family: $paragraph;
+  position: relative;
+}
+
+body {
+  font-size: 1.8rem;
+}
+
+//// NAVIGATION ///////////////////////////////////////////////////////////////////////////////////////////////
+nav ul li a {
+  font-family: $heading;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.side_nav ul li a {
+  font-family: $heading !important;
+  font-size: 16px;
+}
+
+.side_nav ul li a:hover {
+  font-family: $heading !important;
+  font-size: 16px;
+}
+
+//// HEADINGS //////////////////////////////////////////////////////////////////////////////////////////////////
+h1, h2, h3, h4, h5, h5 {
+  font-family: $heading !important;
+}
+
+h1, .section_heading {
+  font-weight: 300;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+//// PARAGRAPHS ////////////////////////////////////////////////////////////////////////////////////////////////
+p {
+  color: #333;
+}
+
+//// LISTS ////////////////////////////////////////////////////////////////////////////////////////////////////////
+.number_list li:before {
+  font-family: $heading !important;
+  font-weight: 400 !important;
+}
+
+//// PAGES ///////////////////////////////////////////////////////////////////////////////////////////////////////
+// Global
+.page_content {
+
+}
+
+.page_content p {
+  color: #333 !important;
+}
+
+.page_content p.intro-paragraph {
+  font-family: $heading;
+}
+
+// About Us
+// Stat Blocks
+.stat_block_wrapper .stat_block .title_wrap .title {
+  position: relative;
+  font-family: $heading !important;
+  font-weight: 400 !important;
+  font-size: 5rem;
+  color: $blue !important;
+}
+
+.stat_block_wrapper .stat_block .title_wrap .circle_unit {
+  font-family: $heading !important;
+  font-size: 1.5rem;
+  vertical-align: top !important; // to actually vertially centre
+}
+
+.stat_block_wrapper .stat_block .message {
+  font-family: $paragraph !important;
+}
+
+.team_member_name {
+  font-family: $heading !important;
+}
+
+.team_member_title {
+  font-size: 1.8rem;
+}
+
+.team_member_email {
+  font-family: $heading !important;
+  font-size: 1.8rem;
+}
+
+//// ELEMENTS /////////////////////////////////////////////////////////////////////////////////////////////////
+// Page Heading Bar
+.divider {
+  height: 3px;
+}
+
+// Slick Carousel
+// Info (Caption)
+.media_holder .slider .slide .info {
+  max-width: 50% !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 15px !important;
+  font-size: 1.4rem !important;
+  background-color: rgba(#FFF, 0.9) !important;
+  bottom: auto !important;
+}
+
+// Author
+.media_holder .slider .slide .info .author {
+  display: block;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+// Position the info where we want to
+// TL
+.media_holder .slider .slide .info.topLeft {
+  top: 10px;
+  left: 10px;
+}
+
+// TC
+.media_holder .slider .slide .info.topCentre {
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// TR
+.media_holder .slider .slide .info.topRight {
+  top: 10px;
+  right: 10px;
+}
+
+// CL
+.media_holder .slider .slide .info.centreLeft {
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+// C
+.media_holder .slider .slide .info.centre {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// CL
+.media_holder .slider .slide .info.centreRight {
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+// BL
+.media_holder .slider .slide .info.bottomLeft {
+  top: 80%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+// BC
+.media_holder .slider .slide .info.bottomCentre {
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// BR
+.media_holder .slider .slide .info.bottomRight {
+  top: 80%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+/*
+&.topLeft
+            top: 10px
+            left: 10px
+
+          &.topCenter
+            top: 10px
+            left: 50%
+            transform: translateX(-50%)
+
+          &.topRight
+            top: 10px
+            right: 10px
+
+          &.centerLeft
+            top: 50%
+            left: 10px
+            transform: translateY(-50%)
+
+          &.center
+            top: 50%
+            left: 50%
+            tranform: translate(-50%, -50%)
+
+          &.centerRight
+            top: 50%
+            right: 10px
+            tranform: translateY(-50%)
+
+          &.bottomLeft
+            bottom: 0
+            left: 10px
+            transform: translateY(-50%)
+
+          &.bottomCenter
+            bottom: 0
+            left: 50%
+            transform: translate(-50%, -50%)
+
+          &.bottomRight
+            bottom: 0
+            right: 10px
+            transform: translateY(-50%)
+*/

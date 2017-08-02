@@ -1,0 +1,128 @@
+// font face declaration
+// @font-face {
+//     font-family: 'ProximaNovaRegular';
+//     src: url('../inc/fonts/proximanova-regular-webfont.eot');
+//     src: url('../inc/fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+//          url('../inc/fonts/proximanova-regular-webfont.woff') format('woff'),
+//          url('../inc/fonts/proximanova-regular-webfont.ttf') format('truetype'),
+//          url('../inc/fonts/proximanova-regular-webfont.svg#ProximaNovaRegular') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+
+@font-face {
+    font-family: 'AnonymousPro';
+    src: url('../../fonts/anonymous/Anonymous_Pro.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AnonymousProBold';
+    src: url('../../fonts/anonymous/Anonymous_Pro_Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AnonymousProBoldItalic';
+    src: url('../../fonts/anonymous/Anonymous_Pro_Bold_Italic.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AnonymousProItalic';
+    src: url('../../fonts/anonymous/Anonymous_Pro_Italic.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{font-size: 62.5%;}
+
+
+
+/*mixins for cleaner font managment*/
+@mixin anon {font-family: "AnonymousPro", sans-serif; font-weight:400; }
+@mixin anonBold {font-family: "AnonymousProBold", sans-serif; }
+@mixin anonBoldItalic {font-family: "AnonymousProBoldItalic", sans-serif; }
+@mixin anonItlalic {font-family: "AnonymousProItalic", sans-serif; }
+
+@mixin freightLight {font-family: "freight-sans-pro", sans-serif; font-weight:300; font-style:normal; }
+@mixin freightBook {font-family: "freight-sans-pro", sans-serif;  font-weight:400;}
+@mixin freightMedium {font-family: "freight-sans-pro", sans-serif;  font-weight:500;}
+@mixin freightSemiBold {font-family: "freight-sans-pro", sans-serif;  font-weight:600;}
+@mixin freightBold {font-family: "freight-sans-pro", sans-serif;  font-weight:700; font-style:normal;}
+
+
+// html{
+//      font-size:58%;
+//      @include bp(1200) {
+//      }
+//      @include bp(600) {
+//          font-size:56%;
+//      }
+//      @include bp(600) {
+//          font-size:53%;
+//      }
+//      @include bp(450) {
+//          font-size:50%;
+//      }
+// }
+
+//IE9 + 10 doesnt like shorthand font delcrations with rems
+body {font: 22px/1.5 sans-serif; font-size: 2.2rem; color:$font_color_1; @include freightMedium;}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	@include freightSemiBold;
+	color: $highlight;
+    line-height: 0.92;
+}
+
+.hide {
+	h1, .h1 {
+	    font-size: 9rem;
+	    @include bp(1024) { font-size: 7rem; }
+	    @include bp(750) { font-size: 5rem; }
+	}
+
+	h2, .h2 {
+	    font-size: 6rem;
+	    @include bp(750) { font-size: 5rem; }
+	}
+
+	h3, .h3 {
+	    font-size: 3.8rem;
+	    @include bp(750) { font-size: 3.6rem; }
+	}
+}
+
+h1,h2,h3,h4,h5 {line-height: 1.1;}
+
+h1,.h1 {font-size: 5.2rem; &--large {font-size: 7rem;}}
+h2,.h2 {font-size: 3.7rem;}
+h3,.h3 {font-size: 2.2rem}
+h4,.h4 {font-size: 2rem}
+h5,.h5 {font-size: 1.8rem; text-transform: uppercase;}
+
+a {color: $highlight;}
+p a, li a {text-decoration: underline;color: $highlight;}
+
+ol {list-style-position: inside; list-style: disc;}
+ol li {line-height: 2rem;
+	ol {margin-left: 1rem; margin-bottom: 0;}
+}
+
+/*ul*/.ui_list {list-style-position: inside;list-style-type: disc;margin-top: 0;
+ li {line-height: 2.5rem;
+	ul {margin-left: 1rem; margin-bottom: 0;}
+}
+}
+
+/*ol*/.numberedlist {list-style: decimal;
+	li {line-height: 2.5rem;}
+	ol {list-style: decimal;}
+}
+
+
