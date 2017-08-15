@@ -8,270 +8,225 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>Realstar Group | Contact Us</title>
-    <meta name="description" content="Realstar Group is one of Canada's leading privately owned real estate investment and management companies.">
-    <meta property="og:title" content="Contact Realstar Group" />
-    <meta property="og:description" content="Realstar Group is one of Canada's leading privately owned real estate investment and management companies. Contact us at our Toronto or London offices." />
-    <meta property="og:image" content="http://www.realstargroup.com/img/toronto-og-image.jpg" />
-
-
+	<meta name="description" content="Realstar Group is one of Canada's leading privately owned real estate investment and management companies.">
+	<meta property="og:title" content="Contact Realstar Group" />
+	<meta property="og:description" content="Realstar Group is one of Canada's leading privately owned real estate investment and management companies. Contact us at our Toronto or London offices." />
+	<meta property="og:image" content="http://www.realstargroup.com/img/toronto-og-image.jpg" />
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
 
 	<!-- Styles -->
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"/>
 	<link rel="stylesheet" href="dist/css/app.min.css">
 	<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"> -->
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css"> -->
-	
+
 	<script src="https://use.typekit.net/tkk2lvo.js"></script>
 	<script>try{Typekit.load({ async: false });}catch(e){}</script>
-    <script>document.documentElement.classList.add('exe');</script>
+	<script>document.documentElement.classList.add('exe');</script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeYoWXSXwVwM8MMTMA7NMkINf9hPR8eKw"></script>
+	<script type="text/javascript">
+		// When the window has finished loading create our google map below
+		google.maps.event.addDomListener(window, 'load', init);
 
-	        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeYoWXSXwVwM8MMTMA7NMkINf9hPR8eKw"></script>
-        
-        <script type="text/javascript">
-            // When the window has finished loading create our google map below
-            google.maps.event.addDomListener(window, 'load', init);
+		var mapStyles = [{'featureType':'all','elementType':'labels.text.fill','stylers':[{'saturation':36},{'lightness':40},{'color':'#818181'},{'visibility':'on'}]},{'featureType':'all','elementType':'labels.text.stroke','stylers':[{'visibility':'on'},{'lightness':16},{'color':'#ffffff'}]},{'featureType':'all','elementType':'labels.icon','stylers':[{'visibility':'off'}]},{'featureType':'administrative','elementType':'geometry.fill','stylers':[{'lightness':20}]},{'featureType':'administrative','elementType':'geometry.stroke','stylers':[{'color':'#a2a2a2'},{'lightness':17},{'weight':1.2},{'visibility':'on'}]},{'featureType':'administrative.locality','elementType':'labels.text','stylers':[{'visibility':'on'},{'color':'#ffffff'}]},{'featureType':'administrative.locality','elementType':'labels.text.fill','stylers':[{'visibility':'on'},{'color':'#949494'}]},{'featureType':'administrative.locality','elementType':'labels.icon','stylers':[{'visibility':'on'}]},{'featureType':'landscape','elementType':'geometry','stylers':[{'color':'#f5f5f5'},{'lightness':20}]},{'featureType':'landscape.man_made','elementType':'geometry.stroke','stylers':[{'visibility':'on'},{'color':'#b9b9b9'}]},{'featureType':'poi','elementType':'geometry','stylers':[{'color':'#f5f5f5'},{'lightness':21}]},{'featureType':'poi.park','elementType':'geometry','stylers':[{'color':'#dedede'},{'lightness':21}]},{'featureType':'road.highway','elementType':'all','stylers':[{'color':'#d1d1d1'}]},{'featureType':'road.highway','elementType':'geometry.fill','stylers':[{'lightness':17},{'hue':'#ff0000'}]},{'featureType':'road.highway','elementType':'geometry.stroke','stylers':[{'lightness':29},{'weight':0.2}]},{'featureType':'road.highway','elementType':'labels.text','stylers':[{'visibility':'off'}]},{'featureType':'road.highway','elementType':'labels.text.fill','stylers':[{'visibility':'off'}]},{'featureType':'road.highway.controlled_access','elementType':'geometry.fill','stylers':[{'visibility':'on'},{'color':'#d1d1d1'}]},{'featureType':'road.arterial','elementType':'geometry','stylers':[{'color':'#ffffff'},{'lightness':18}]},{'featureType':'road.arterial','elementType':'geometry.fill','stylers':[{'visibility':'on'},{'color':'#e4e4e4'}]},{'featureType':'road.local','elementType':'all','stylers':[{'color':'#909090'},{'visibility':'simplified'}]},{'featureType':'road.local','elementType':'geometry','stylers':[{'color':'#ffffff'},{'lightness':16}]},{'featureType':'road.local','elementType':'geometry.fill','stylers':[{'visibility':'on'},{'color':'#e6e6e6'}]},{'featureType':'transit','elementType':'geometry','stylers':[{'color':'#f2f2f2'},{'lightness':19}]},{'featureType':'water','elementType':'geometry','stylers':[{'color':'#e9e9e9'},{'lightness':17}]},{'featureType':'water','elementType':'geometry.fill','stylers':[{'visibility':'on'},{'color':'#d3d3d3'}]}]
 
-        var mapStyles = [{'featureType':'all','elementType':'labels.text.fill','stylers':[{'saturation':36},{'lightness':40},{'color':'#818181'},{'visibility':'on'}]},{'featureType':'all','elementType':'labels.text.stroke','stylers':[{'visibility':'on'},{'lightness':16},{'color':'#ffffff'}]},{'featureType':'all','elementType':'labels.icon','stylers':[{'visibility':'off'}]},{'featureType':'administrative','elementType':'geometry.fill','stylers':[{'lightness':20}]},{'featureType':'administrative','elementType':'geometry.stroke','stylers':[{'color':'#a2a2a2'},{'lightness':17},{'weight':1.2},{'visibility':'on'}]},{'featureType':'administrative.locality','elementType':'labels.text','stylers':[{'visibility':'on'},{'color':'#ffffff'}]},{'featureType':'administrative.locality','elementType':'labels.text.fill','stylers':[{'visibility':'on'},{'color':'#949494'}]},{'featureType':'administrative.locality','elementType':'labels.icon','stylers':[{'visibility':'on'}]},{'featureType':'landscape','elementType':'geometry','stylers':[{'color':'#f5f5f5'},{'lightness':20}]},{'featureType':'landscape.man_made','elementType':'geometry.stroke','stylers':[{'visibility':'on'},{'color':'#b9b9b9'}]},{'featureType':'poi','elementType':'geometry','stylers':[{'color':'#f5f5f5'},{'lightness':21}]},{'featureType':'poi.park','elementType':'geometry','stylers':[{'color':'#dedede'},{'lightness':21}]},{'featureType':'road.highway','elementType':'all','stylers':[{'color':'#d1d1d1'}]},{'featureType':'road.highway','elementType':'geometry.fill','stylers':[{'lightness':17},{'hue':'#ff0000'}]},{'featureType':'road.highway','elementType':'geometry.stroke','stylers':[{'lightness':29},{'weight':0.2}]},{'featureType':'road.highway','elementType':'labels.text','stylers':[{'visibility':'off'}]},{'featureType':'road.highway','elementType':'labels.text.fill','stylers':[{'visibility':'off'}]},{'featureType':'road.highway.controlled_access','elementType':'geometry.fill','stylers':[{'visibility':'on'},{'color':'#d1d1d1'}]},{'featureType':'road.arterial','elementType':'geometry','stylers':[{'color':'#ffffff'},{'lightness':18}]},{'featureType':'road.arterial','elementType':'geometry.fill','stylers':[{'visibility':'on'},{'color':'#e4e4e4'}]},{'featureType':'road.local','elementType':'all','stylers':[{'color':'#909090'},{'visibility':'simplified'}]},{'featureType':'road.local','elementType':'geometry','stylers':[{'color':'#ffffff'},{'lightness':16}]},{'featureType':'road.local','elementType':'geometry.fill','stylers':[{'visibility':'on'},{'color':'#e6e6e6'}]},{'featureType':'transit','elementType':'geometry','stylers':[{'color':'#f2f2f2'},{'lightness':19}]},{'featureType':'water','elementType':'geometry','stylers':[{'color':'#e9e9e9'},{'lightness':17}]},{'featureType':'water','elementType':'geometry.fill','stylers':[{'visibility':'on'},{'color':'#d3d3d3'}]}]
+		function mapOptionsFunc (xcords, ycords) {
+			var mapOptions = {
+				zoom: 11,
+				center: new google.maps.LatLng(xcords, ycords),
+				styles: mapStyles,
+			};
 
-    	     function mapOptionsFunc (xcords, ycords) {
-                var mapOptions = {
-                    zoom: 11,
-                    center: new google.maps.LatLng(xcords, ycords), // New York
-                    styles: mapStyles,
-                };
-                return mapOptions;
-            }
+			return mapOptions;
+		}
 
-            function init() {
-                // Basic options for a simple Google Map
-                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-                var torontoX = 43.6692666;
-                var torontoY = -79.3919419;
-                var londonX = 51.4964802;
-                var londonY = -0.1396604;
-                // var mapOptions = {
-                //     zoom: 11,
-                //     center: new google.maps.LatLng(torontoX, torontoY), // New York
-                //     styles: mapStyles,
-                // };
+		function init() {
+			// Basic options for a simple Google Map
+			// For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+			var torontoX = 43.6692666;
+			var torontoY = -79.3919419;
 
-                // Get the HTML DOM element that will contain your map 
-                // We are using a div with id="map" seen below in the body
-                var mapElementToronto = document.getElementById('map_toronto');
+			// Get the HTML DOM element that will contain your map
+			// We are using a div with id="map" seen below in the body
+			var mapElementToronto = document.getElementById('map_toronto');
 
-                // Create the Google Map using our element and options defined above
-                var map = new google.maps.Map(mapElementToronto, mapOptionsFunc(torontoX, torontoY));
+			// Create the Google Map using our element and options defined above
+			var map = new google.maps.Map(mapElementToronto, mapOptionsFunc(torontoX, torontoY));
 
-                // Let's also add a marker while we're at it
-                var markerToronto = new google.maps.Marker({
-                    position: new google.maps.LatLng(torontoX, torontoY),
-                    map: map,
-                    title: 'Toronto'
-                });
-
-                var mapElementLondon = document.getElementById('map_london');
-
-                // Create the Google Map using our element and options defined above
-                var map2 = new google.maps.Map(mapElementLondon, mapOptionsFunc(londonX, londonY));
-
-                // Let's also add a marker while we're at it
-                var markerLondon = new google.maps.Marker({
-                    position: new google.maps.LatLng(londonX, londonY),
-                    map: map2,
-                    title: 'London'
-                });
-
-            }
-
-        </script>
+			// Let's also add a marker while we're at it
+			var markerToronto = new google.maps.Marker({
+				position: new google.maps.LatLng(torontoX, torontoY),
+				map: map,
+				title: 'Toronto'
+			});
+		}
+	</script>
 
 </head>
 
 <body class="contact_page">
+	<header class="site_header">
+		<a href="/" class="logo"><img src="img/logo.png" alt="realstar group logo"></a>
+		<button class="menu_toggle js_menu_toggle">
+			<span class="visually-hidden">Menu</span>
+			<i class="fa fa-bars"></i>
+			<i class="fa fa-times"></i>
+		</button>
+		<nav>
+			<ul>
+				<li>
+					<a href="about.html">About Us</a>
+					<ul class="dropdown">
+						<li><a href="/about.html#section1">Snapshot</a></li>
+						<li><a href="/about.html#section2">Firm</a></li>
+						<li><a href="/about.html#section3">History</a></li>
+						<li><a href="/about.html#section4">Business Lines</a></li>
+						<li><a href="/about.html#section5">Approach</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="brands.html">Brands</a>
+					<ul class="dropdown">
+						<li><a href="/capital.html#section1">Realstar Apartment Partnership (RAP) I, II, III</a></li>
+						<li><a href="/capital.html#section2">MH I, II</a></li>
+						<li><a href="/capital.html#section3">Reastar European Capital (RECAP) I, II, III</a></li>
+						<li><a href="/capital.html#section4">Realstar Healthcare Partnership</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="design.html">Design</a>
+					<ul class="dropdown">
+						<li><a href="/investments.html#section1">Pagecorp</a></li>
+						<li><a href="/investments.html#section2">Delta Hotels &amp; Resorts</a></li>
+						<li><a href="/investments.html#section3">Days Inn</a></li>
+						<li><a href="/investments.html#section4">Holiday Inn- UK</a></li>
+						<li><a href="/investments.html#section5">Elephant &amp; Castle</a></li>
+					</ul>
+				</li>
+				<li><a href="news.html">News</a></li>
+				<li><a href="">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
 
-    <header class="site_header">
-        <a href="/" class="logo"><img src="img/logo.png" alt="realstar group logo"></a>
-        <button class="menu_toggle js_menu_toggle">
-            <span class="visually-hidden">Menu</span>
-            <i class="fa fa-bars"></i>
-            <i class="fa fa-times"></i>
-        </button>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/about.html">About Us</a>
-                    <ul class="dropdown">
-                        <li><a href="/about.html#section1">Snapshot</a></li>
-                        <li><a href="/about.html#section2">Firm</a></li>
-                        <li><a href="/about.html#section3">History</a></li>
-                        <li><a href="/about.html#section4">Business Lines</a></li>
-                        <li><a href="/about.html#section5">Approach</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/capital.html">Capital</a>
-                    <ul class="dropdown">
-                        <li><a href="/capital.html#section1">Realstar Apartment Partnership (RAP) I, II, III</a></li>
-                        <li><a href="/capital.html#section2">MH I, II</a></li>
-                        <li><a href="/capital.html#section3">Reastar European Capital (RECAP) I, II, III</a></li>
-                        <li><a href="/capital.html#section4">Realstar Healthcare Partnership</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/investments.html">Investments</a>
-                    <ul class="dropdown">
-                        <li><a href="/investments.html#section1">Pagecorp</a></li>
-                        <li><a href="/investments.html#section2">Delta Hotels & Resorts</a></li>
-                        <li><a href="/investments.html#section3">Days Inn</a></li>
-                        <li><a href="/investments.html#section4">Holiday Inn- UK</a></li>
-                        <li><a href="/investments.html#section5">Elephant & Castle</a></li>
-                    </ul>
-                </li>
-                <li><a href="/principals.html">Principals</a></li>
-                <!-- <li><a href="/news.html">News</a>
-                    <ul class="dropdown">
-                        <li><a href="/news.html#section1">2016</a></li>
-                        <li><a href="/news.html#section1">2015</a></li>
-                    </ul>
-                </li> -->
-                <li><a href="/contact.html">Contact</a></li>
-                <!-- <li><a href="tel:4169232950">416-923-2950</a></li> -->
-            </ul>
-        </nav>
-    </header>
+	<main class="content_wrapper" role="main">
 
-    <main class="content_wrapper" role="main">
+		<div class="location_block_wrapper">
+			<div class="location_block location_block--toronto">
+				<div class="info_wrap">
+					<div class="image"></div>
 
-        <div class="location_block_wrapper">
-            <div class="location_block location_block--toronto">
-                <div class="info_wrap">
-                    <div class="image"></div>
+					<div class="info">
+						<div class="city">
+							<h2>Toronto</h2><span><h3>Canada</h3></span>
+						</div>
 
-                    <div class="info">
-                        <h1>Toronto</h1>
-                        <h2>Canada</h2>
+						<div class="info_block info_block--bold">
+							<span>contact</span>Suzy Pakmalaki
+						</div>
 
-                        <div class="info_block info_block--bold">
-                            <span>contact</span>Maryke Wharton
-                        </div>
+						<div class="info_block">
+							<span>Phone</span>416.966.8385
+						</div>
 
-                        <div class="info_block">
-                            <span>Phone</span>416-923-2950
-                        </div>
+						<div class="info_block info_block--grey_link">
+							<span>Email</span><a href="mailto:franchise@realstarhospitality.com ">franchise@realstarhospitality.com</a>
+						</div>
 
-                        <div class="info_block info_block--grey_link">
-                            <span>Email</span><a href="mailto:info@realstar.ca">info@realstar.ca</a>
-                        </div>
+						<div class="info_block">
+							<span>Fax</span>416.923.5424
+						</div>
 
-                        <div class="info_block">
-                            <span>Fax</span>416-923-9315
-                        </div>
+						<div class='sup_contact'>
+							<p>For Days Inn, Motel 6 or Studio 6 <b>franchise information</b> in Canada, please contact: <a href='mailto:franchise@realstarhospitality.com'>franchise@realstarhospitality.com</a></p>
+							<p>Ready to make your best move? For careers at Realstar, please contact: <a href='mailto:careers@realstar.ca'>careers@realstar.ca</a></p>
+						</div>
+						<div class='sup_contact contact_list'>
+							<p><strong>Development Contacts:</strong></p>
+							<p>For Days Inn, Motel 6 or Studio 6 franchise information in Canada, please contact: franchise@realstarhospitality.com or reach out directly to your area representative listed below:</p>
+							<ul class="">
+								<li>
+									<div class="team_member">
+										<div class="team_member_name">Irwin M. Prince</div>
+										<div class=""><span class="team_member_title">President &amp; COO</span></div>
+										<div class=""><a class="team_member_email" href="mailto:info@realstar.ca">irwin.prince@realstarhospitality.com</a></div>
+										<div class="cities">British Columbia, Alberta, NWT (Days Inn)</div>
+										<div class="cities">Alberta, NWT (Motel 6 / Studio 6)</div>
+									</div>
+								</li>
+								<li>
+									<div class="team_member">
+										<div class="team_member_name">Irwin M. Prince</div>
+										<div class=""><span class="team_member_title">President &amp; COO</span></div>
+										<div class=""><a class="team_member_email" href="mailto:info@realstar.ca">irwin.prince@realstarhospitality.com</a></div>
+										<div class="cities">British Columbia, Alberta, NWT (Days Inn)</div>
+										<div class="cities">Alberta, NWT (Motel 6 / Studio 6)</div>
+									</div>
+								</li>
+								<li>
+									<div class="team_member">
+										<div class="team_member_name">Irwin M. Prince</div>
+										<div class=""><span class="team_member_title">President &amp; COO</span></div>
+										<div class=""><a class="team_member_email" href="mailto:info@realstar.ca">irwin.prince@realstarhospitality.com</a></div>
+										<div class="cities">British Columbia, Alberta, NWT (Days Inn)</div>
+										<div class="cities">Alberta, NWT (Motel 6 / Studio 6)</div>
+									</div>
+								</li>
+								<li>
+									<div class="team_member">
+										<div class="team_member_name">Irwin M. Prince</div>
+										<div class=""><span class="team_member_title">President &amp; COO</span></div>
+										<div class=""><a class="team_member_email" href="mailto:info@realstar.ca">irwin.prince@realstarhospitality.com</a></div>
+										<div class="cities">British Columbia, Alberta, NWT (Days Inn)</div>
+										<div class="cities">Alberta, NWT (Motel 6 / Studio 6)</div>
+									</div>
+								</li>
+								<li>
+									<div class="team_member">
+										<div class="team_member_name">Irwin M. Prince</div>
+										<div class=""><span class="team_member_title">President &amp; COO</span></div>
+										<div class=""><a class="team_member_email" href="mailto:info@realstar.ca">irwin.prince@realstarhospitality.com</a></div>
+										<div class="cities">British Columbia, Alberta, NWT (Days Inn)</div>
+										<div class="cities">Alberta, NWT (Motel 6 / Studio 6)</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 
-                        <div class='sup_contact'>
-                            <p>For Days Inn, Motel 6 or Studio 6 <b>franchise information</b> in Canada, please contact: <a href='mailto:franchise@realstarhospitality.com'>franchise@realstarhospitality.com</a></p>
-                            <p>Ready to make your best move? For careers at Realstar, please contact: <a href='mailto:careers@realstar.ca'>careers@realstar.ca</a></p>
-                        </div>
-                    </div>
-                </div>
+				<div class="map_wrapper">
+					<div class="address">
+						<p>Address</p>
+						<p>77 Bloor Street West<br>Suite 2000<br>Toronto<br>M5S 1M2 <span>CANADA</span></p>
+						<p><a class='map_link' href='https://www.google.ca/maps/place/Realstar+Group/@43.6694749,-79.3897981,15z/data=!4m5!3m4!1s0x0:0x4a3a364d27d76a00!8m2!3d43.6694749!4d-79.3897981' target='_blank'>View Google map</a></p>
+						<p class='terms_conditions'>Read our website <a href='/terms'>terms and conditions</a></p>
+					</div>
+					<div class="map">
+						<div id="map_toronto" class="map_inner"></div>
+							<!--
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1442.9886506500336!2d-79.39108129478237!3d43.669441896800016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34afc4a4da83%3A0x4a3a364d27d76a00!2sRealstar+Group!5e0!3m2!1sen!2suk!4v1478011127193" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+							-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script>
+		(function (b, o, i, l, e, r) {
+		b.GoogleAnalyticsObject = l; b[l] || (b[l] =
+		function () { (b[l].q = b[l].q || []).push(arguments) }); b[l].l = +new Date;
+		e = o.createElement(i); r = o.getElementsByTagName(i)[0];
+		e.src = 'https://www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e, r)
+		}(window, document, 'script', 'ga'));
+		ga('create', 'UA-73214503-1', 'auto'); ga('send', 'pageview');
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script> -->
+		<script src="src/js/app.js"></script>
 
-                <div class="map_wrapper">
-                    <div class="address">
-                        <p>Address</p>
-                        <p>
-                            77 Bloor Street West<br>
-                            Suite 2000<br>
-                            Toronto<br>
-                            M5S 1M2 <span>CANADA</span>
-                        </p>
-                        <p><a class='map_link' href='https://www.google.ca/maps/place/Realstar+Group/@43.6694749,-79.3897981,15z/data=!4m5!3m4!1s0x0:0x4a3a364d27d76a00!8m2!3d43.6694749!4d-79.3897981' target='_blank'>View Google map</a></p>
-                        <p class='terms_conditions'>Read our website <a href='/terms'>terms and conditions</a></p>
-                    </div>
-                    <div class="map">
-                        <div id="map_toronto" class="map_inner"></div>
-                        <!--
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1442.9886506500336!2d-79.39108129478237!3d43.669441896800016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34afc4a4da83%3A0x4a3a364d27d76a00!2sRealstar+Group!5e0!3m2!1sen!2suk!4v1478011127193" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                         -->
-                    </div>
-                </div>
-            </div>
-
-            <div class="location_block location_block--london">
-                <div class="info_wrap">
-                    <div class="image"></div>
-
-                    <div class="info">
-                        <h1>London</h1>
-                        <h2>United Kingdom</h2>
-
-                        <div class="info_block info_block--bold">
-                            <span>contact</span>Laura Sawyer
-                        </div>
-
-                        <div class="info_block">
-                            <span>Phone</span>020 7761 7888
-                        </div>
-
-                        <div class="info_block info_block--grey_link">
-                            <span>Email</span><a href="mailto:laura.sawyer@realstargroup.com">Laura Sawyer</a>
-                        </div>
-
-                        <div class="info_block">
-                            <span>Fax</span>020 7761 7889
-                        </div>
-                    </div>
-                </div>
-
-                <div class="map_wrapper">
-                    <div class="address">
-                        <p>Address</p>
-                        <p>
-                            1st Floor<br>
-                            7a Howick Place<br>
-                            London<br>
-                            SW1P 1DZ <span>UK</span>
-                        </p>
-                        <p><a class='map_link' href='https://www.google.ca/maps/place/Realstar+Group/@51.4964802,-0.1396604,17z/data=!3m1!4b1!4m5!3m4!1s0x487604de563d9cef:0x7922cc81b960e002!8m2!3d51.4964802!4d-0.1374717' target='_blank'>View Google map</a></p>
-                        <p class='terms_conditions terms_empty'>&emsp;</p>
-                    </div>
-                    <div class="map">
-                        <div id="map_london" class="map_inner"></div>
-                        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.911935906395!2d-0.13966038404851283!3d51.49648351932198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604de563d9cef%3A0x7922cc81b960e002!2sRealstar+Group!5e0!3m2!1sen!2suk!4v1478018259410" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-    </main>
-
-
-    <!--	</div>  closing page wrap div - stick footer box -->
-    <!--
-            <footer class="site_footer">
-
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum, odio ut rhoncus iaculis.</p>
-                </div>
-
-            </footer> -->
-    <!-- footer js -->
-    <script>
-        (function (b, o, i, l, e, r) {
-            b.GoogleAnalyticsObject = l; b[l] || (b[l] =
-                function () { (b[l].q = b[l].q || []).push(arguments) }); b[l].l = +new Date;
-            e = o.createElement(i); r = o.getElementsByTagName(i)[0];
-            e.src = 'https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e, r)
-        }(window, document, 'script', 'ga'));
-        ga('create', 'UA-73214503-1', 'auto'); ga('send', 'pageview');
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script> -->
-    <script src="src/js/app.js"></script>
-
-</body>
+	</body>
 </html>

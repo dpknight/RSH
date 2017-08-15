@@ -142,11 +142,11 @@ nav {
 /*----------- header nav item active states -------------*/
 .home_page {}
 .about_page {@include navItemActive(1);}
-.capital_page {@include navItemActive(2);}
-.investments_page {@include navItemActive(3);}
-.principals_page {@include navItemActive(4);}
-.news_page {@include navItemActive(5);}
-.contact_page {@include navItemActive(6);}
+.brands_page {@include navItemActive(2);}
+.design_page {@include navItemActive(3);}
+/*.principals_page {@include navItemActive(4);}*/
+.news_page {@include navItemActive(4);}
+.contact_page {@include navItemActive(5);}
 
 /*------------------------------------*\
     ##FOOTER

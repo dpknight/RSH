@@ -1,15 +1,16 @@
 //// FONTS //////////////////////////////////////////////////////////////////////////////////////////////////////
 $heading: 'Fira Sans', helvetica, arial, sans-serif;
-$paragraph: 'Lora', serif;
+/*$paragraph: 'Lora', serif;*/
 
 //// GLOBAL /////////////////////////////////////////////////////////////////////////////////////////////////////
 html, body {
-  font-family: $paragraph;
+  font-family: $heading;
   position: relative;
 }
 
 body {
   font-size: 1.8rem;
+  font-weight: 400;
 }
 
 //// NAVIGATION ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -56,7 +57,7 @@ p {
 //// PAGES ///////////////////////////////////////////////////////////////////////////////////////////////////////
 // Global
 .page_content {
-
+  padding-left: 250px;
 }
 
 .page_content p {
@@ -84,20 +85,176 @@ p {
 }
 
 .stat_block_wrapper .stat_block .message {
-  font-family: $paragraph !important;
+  font-family: $heading !important;
 }
 
 .team_member_name {
   font-family: $heading !important;
+  font-weight: 600;
 }
 
 .team_member_title {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .team_member_email {
   font-family: $heading !important;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+}
+
+.team_member .cities {
+  font-size: 1.4rem;
+}
+
+.team_member .cities:first-child {
+  margin-top: 30px;
+}
+
+// Brands
+.brand-details {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.brand_stats {
+  list-style: none;
+  padding: 0px;
+  margin-bottom: 50px;
+  /*display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;*/
+}
+
+.brand_stat {
+  margin-bottom: 20px;
+  /*width: 50%;*/
+}
+
+.brand_stat_title .fa, .brand_stat_title h4 {
+  display: inline-block;
+}
+
+.brand_stat_title .fa {
+  color: $blue;
+}
+
+.brand_stat_title h4 {
+  font-weight: 400;
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+
+.brand_stat p {
+  margin-bottom: 0px;
+  padding-left: 32px;
+}
+
+.brand_stat ul {
+  list-style: none;
+  list-style-position: outside;
+  margin-bottom: 0px;
+  padding-left: 32px;
+}
+
+// Design & News
+.design_page .content_wrapper .page_content, .news_page .content_wrapper .page_content {
+  padding-left: 50px !important;
+}
+
+.design_page .content_wrapper .page_content ul, .news_page .content_wrapper .page_content ul {
+  list-style: none;
+  list-style-position: inside;
+}
+
+.design_page .content_wrapper .page_content ul li, .news_page .content_wrapper .page_content ul li  {
+  list-style: none;
+  list-style-position: inside;
+  margin-bottom: 20px;
+}
+
+.design_page .content_wrapper .page_content ul li .fa, .news_page .content_wrapper .page_content ul li .fa {
+  color: $blue;
+  margin-right: 10px;
+}
+
+.design_page .content_wrapper .page_content ul li a, .news_page .content_wrapper .page_content ul li a {
+  text-decoration: none;
+  color: $blue2
+}
+
+.design_page .content_wrapper .page_content ul li a span, .news_page .content_wrapper .page_content ul li a span {
+  padding-left: 5px;
+  font-size: 1.4rem;
+}
+
+.design_page .content_wrapper .page_content ul li a:hover, .news_page .content_wrapper .page_content ul li a:hover {
+  color: $blue;
+}
+
+// Contact
+.contact_page .content_wrapper .location_block_wrapper .location_block .info_wrap .info .city h2, .contact_page .content_wrapper .location_block_wrapper .location_block .info_wrap .info .city span {
+  display: inline-block;
+}
+
+.contact_page .content_wrapper .location_block_wrapper .location_block .info_wrap .info .city span {
+  margin-left: 10px;
+}
+
+.contact_page .location_block {
+  width: 100% !important;
+}
+
+.contact_page .location_block .info_wrap .info .info_block span {
+  font-family: $heading !important;
+}
+
+.contact_page .image {
+  background-image: url("../../img/contact/Landscape-Toronto-AdobeStock_10709082.jpeg") !important;
+  background-position: 50% !important;
+}
+
+.contact_page .sup_contact {
+  max-width: 500px !important;
+}
+
+.sup_contact ul {
+  padding-left: 0px;
+  list-style: none;
+  list-style-position: inside;
+}
+
+.sup_contact ul li {
+  list-style: none;
+  padding-bottom: 30px;
+}
+
+.sup_contact.contact_list {
+  max-width: 100% !important;
+}
+
+.sup_contact.contact_list > p {
+  max-width: 500px !important;
+}
+
+.sup_contact.contact_list ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.sup_contact.contact_list ul li {
+  margin-right: 50px;
+}
+
+.contact_page .map_wrapper .address {
+  transform: translate3d(0, 0, 0) !important;
+  color: #FFF !important;
+  height: 100%;
+}
+
+.contact_page .map_wrapper .address p {
+  color: #FFF !important;
 }
 
 //// ELEMENTS /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -114,6 +271,7 @@ p {
   margin: 0 !important;
   padding: 15px !important;
   font-size: 1.4rem !important;
+  font-style: italic;
   background-color: rgba(#FFF, 0.9) !important;
   bottom: auto !important;
 }
@@ -169,66 +327,25 @@ p {
 
 // BL
 .media_holder .slider .slide .info.bottomLeft {
-  top: 80%;
+  top: calc(100% - 10px);
   left: 10px;
   transform: translateY(-50%);
 }
 
 // BC
 .media_holder .slider .slide .info.bottomCentre {
-  top: 80%;
+  top: calc(100% - 10px);
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 // BR
 .media_holder .slider .slide .info.bottomRight {
-  top: 80%;
+  top: calc(100% - 10px);
   right: 10px;
-  transform: translateY(-50%);
+  transform: translateY(-100%);
 }
 
-/*
-&.topLeft
-            top: 10px
-            left: 10px
-
-          &.topCenter
-            top: 10px
-            left: 50%
-            transform: translateX(-50%)
-
-          &.topRight
-            top: 10px
-            right: 10px
-
-          &.centerLeft
-            top: 50%
-            left: 10px
-            transform: translateY(-50%)
-
-          &.center
-            top: 50%
-            left: 50%
-            tranform: translate(-50%, -50%)
-
-          &.centerRight
-            top: 50%
-            right: 10px
-            tranform: translateY(-50%)
-
-          &.bottomLeft
-            bottom: 0
-            left: 10px
-            transform: translateY(-50%)
-
-          &.bottomCenter
-            bottom: 0
-            left: 50%
-            transform: translate(-50%, -50%)
-
-          &.bottomRight
-            bottom: 0
-            right: 10px
-            transform: translateY(-50%)
-*/
+.number_list li::after {
+  top: 14px !important;
+}
