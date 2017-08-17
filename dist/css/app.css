@@ -1876,6 +1876,18 @@ p {
 
 .page_content {
   padding-left: 250px; }
+  @media (max-width: 1200px) {
+    .page_content {
+      width: 50%;
+      padding-left: 30px; } }
+  @media (max-width: 980px) {
+    .page_content {
+      width: 100%;
+      max-width: 680px;
+      margin: 0 auto; } }
+  @media (max-width: 480px) {
+    .page_content {
+      font-size: 0.75em; } }
 
 .page_content p {
   color: #333 !important; }
