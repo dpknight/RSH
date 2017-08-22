@@ -74,8 +74,34 @@ p {
   }
 
   // Small Screens
-  @media (max-width:480px) {
+  @media (max-width: 480px) {
       font-size: 0.75em;
+  }
+}
+
+.page_content .team_list {
+  list-style: none;
+
+  // Responsive
+  // Medium Screens
+  @media (max-width: 980apx) {
+    padding-left: 0;
+  }
+  // Small Screens
+  @media (max-width: 480px) {
+    padding-left: 0;
+  }
+}
+
+.page_content .team_list li {
+  padding-bottom: 30px;
+}
+
+.page_content .team_member_name {
+  // Responsive
+  // Small Screens
+  @media (max-width: 480px) {
+    font-size: 1.6rem;
   }
 }
 

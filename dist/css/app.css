@@ -1889,6 +1889,22 @@ p {
     .page_content {
       font-size: 0.75em; } }
 
+.page_content .team_list {
+  list-style: none; }
+  @media (max-width: 980apx) {
+    .page_content .team_list {
+      padding-left: 0; } }
+  @media (max-width: 480px) {
+    .page_content .team_list {
+      padding-left: 0; } }
+
+.page_content .team_list li {
+  padding-bottom: 30px; }
+
+@media (max-width: 480px) {
+  .page_content .team_member_name {
+    font-size: 1.6rem; } }
+
 .page_content p {
   color: #333 !important; }
 
